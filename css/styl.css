@@ -152,7 +152,6 @@ article {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: url(obrazky/logo.png) no-repeat;
     background-size: 40px 40px;
     cursor: pointer;
 }
@@ -242,7 +241,7 @@ nav ul a:hover, .aktivni a {
 }
 
 .welcome {
-    background-image: url(img/chalupa_v_zime.JPEG);
+    background-image: url(../img/chalupa_v_zime.JPEG);
     height: 550px;
     background-size: cover;
     background-position: center;
@@ -352,7 +351,7 @@ footer a {
     }
    .welcome {
     height: 300px;             /* Snížení výšky, aby vynikl obsah pod tím */
-    background-image: url(img/chalupa_v_zime.JPEG);
+    background-image: url(../img/chalupa_v_zime.JPEG);
     background-attachment: scroll; /* Vypnutí fixního pozadí (pro lepší podporu na mobilech) */
     background-position: center center; /* Přesné centrování */
     }
