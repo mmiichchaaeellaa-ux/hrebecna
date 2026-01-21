@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="cs-cz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Webové stránky ubytování Chalupa u Můstku"/>
+    <meta name="keywords" content="chalupa, krušné hory, krušnohoří, ubytování, chalupa u můstku, hřebečná"/>
+    <meta name="author" content="MiKo"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styl.css" type="text/css"/>
+    <link rel="shortcut icon" href="img/mount.png"/>
+    <title>Ceník</title>
+</head>
+
+<body>
+    <header>
+        <div id="logo">
+            <h1><span>U Můstku</span></h1>
+            <small>Chalupa v Krušných horách</small>
+        </div>
+
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="index.html">Domů</a></li>
+                <li><a href="ubytovani.html">Ubytování</a></li>
+                <li class="aktivni"><a href="cenik.html">Ceník</a></li>
+                <li><a href="galerie.html">Galerie</a></li>
+                <li><a class="kontakt-tlacitko" href="kontakt.html">Kontakt</a></li>
+                <li class="lang-switch">
+                    <a href="#" id="lang-cz">CZ</a> |
+                    <a href="#" id="lang-de">DE</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div id="hamburger" onclick="toggleMenu()"></div>
+    </header>
+    <article>
+        <header>
+            <h1>Ceník pro rok 2026</h1>
+        </header>
+    <section>
+        <p>Kapacita ubytování je 18 osob (6 ložnic)</p>
+    <table id="cena_pokoj">
+        <tr class="centrovany">
+            <td>
+                <h3>Cena za hosta při pronájmu pokoje</h3>
+            </td>
+        </tr>
+        <tr>
+            <td><b>1000,- Kč / noc</b> (jedna noc)</td>
+        </tr>
+         <tr>
+            <td><b>700,- Kč / noc</b> (dvě noci a více)</td>
+        </tr>
+    </table>
+
+        <table id="cena_chalupa">
+            <tr class="centrovany">
+                <td colspan="2">
+                    <h3>Cena za celou chalupu na jednu noc</h3>
+                </td>
+            </tr>
+            <tr>
+                <td>Cena za celou chalupu na jednu noc</td>
+                <td>Celoročně: <b>15.000,- Kč</b></td>
+            </tr>
+            <tr>
+                <td>Cena za celou chalupu na více nocí</td>
+                <td>Celoročně: <b>7.500,- Kč/noc</b></td>
+            </tr>
+            <tr>
+                <td>Ceny za celou chalupu na týden</td>
+                <td>Celoročně: <b>52.500,- Kč</b></td>
+            </tr>
+            <tr>
+                <td>Ceny za celou chalupu na víkend</td>
+                <td>Celoročně: <b>15.000,- Kč</b></td>
+            </tr>
+            <tr>
+                <td class="vanoce">Vánoce 2026 - VOLNO</td>
+                <td>1 noc <b>10.000,- Kč</b> (minimálně 3 noci)</td>
+            </tr>
+            <tr>
+                <td class="silvestr">Silvestr 2026 - VOLNO</td>
+                <td>1 noc <b>12.000,- Kč</b> (minimálně 5 nocí)</td>
+            </tr>
+        </table>
+
+        <p>
+            <b>V ceně:</b> povlečení, internet, spotřeba energií, parkování, stolní fotbálek, stolní tenis, turistické informace, kolárna/lyžárna apod. </br>
+            <b>Rekreační poplatek:</b> 30,- Kč osoba/noc </br>
+            <b>Topení v krbu ve společenské místnosti:</b> 200,- Kč/koš, balík (dřevo nebo dřevěné brikety) </br>
+        </p>
+
+    </section>
+    </article>
+    <footer>
+            Vytvořila &copy;MiKo 2025
+    </footer>
+
+    <script src="js/domovska-obrazovka.js"></script>
+    <script src="js/hamburger.js"></script>
+    <script src="js/lang-switch.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="cs-cz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Webové stránky ubytování Chalupa u Můstku"/>
+    <meta name="keywords" content="chalupa, krušné hory, krušnohoří, ubytování, chalupa u můstku, hřebečná"/>
+    <meta name="author" content="MiKo"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styl.css" type="text/css"/>
+    <link rel="shortcut icon" href="img/mount.png"/>
+    <title>Ubytování</title>
+</head>
+
+<body>
+    <header>
+        <div id="logo">
+            <h1><span>U Můstku</span></h1>
+            <small>Chalupa v Krušných horách</small>
+        </div>
+
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="index.html">Domů</a></li>
+                <li class="aktivni"><a href="ubytovani.html">Ubytování</a></li>
+                <li><a href="cenik.html">Ceník</a></li>
+                <li><a href="galerie.html">Galerie</a></li>
+                <li><a class="kontakt-tlacitko" href="kontakt.html">Kontakt</a></li>
+                <li class="lang-switch">
+                    <a href="#" id="lang-cz">CZ</a> |
+                    <a href="#" id="lang-de">DE</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div id="hamburger" onclick="toggleMenu()"></div>
+    </header>
+    <article>
+        <header>
+            <h1>Informace o ubytování</h1>
+        </header>
+    <section>
+            <h3>Pokoje</h3>
+                <ul>
+                    <li>1x Apartmán pro 4 osoby s vlastní koupelnou a kuchyní (lednice, el. sporák, mikrovlnná trouba, rychlovarná konvice).</li>
+                    <li>1x Velký pokoj pro 4 osoby s vlastní koupelnou.</li>
+                    <li>1x Velký pokoj pro 3 - 4 osoby.</li>
+                    <li>3x Malý pokoj, každý pro 2 hosty.</li>
+                </ul>
+            <h3 class="ubytko">Společné sociální zařízení</h3>
+               <ul>
+                    <li>1x koupelna v ubytovací části</li>
+                    <li>2x toaleta v ubytovací části</li>
+                    <li>1x toaleta u společenské místnosti.</li>
+                </ul>
+            <h3 class="ubytko">Společná kuchyně</h3>
+                <ul>
+                    <li>Trouba, el. sporák, lednice, mikrovlnná trouba, rychlovarná konvice, překapávač na kávu, topinkovač, myčka na nádobí</li>
+                </ul>
+    </section>
+    </article>
+    <footer>
+        Vytvořila &copy;MiKo 2025
+    </footer>
+
+    <script src="js/domovska-obrazovka.js"></script>
+    <script src="js/hamburger.js"></script>
+    <script src="js/lang-switch.js"></script>
+</body>
+
+</html>
