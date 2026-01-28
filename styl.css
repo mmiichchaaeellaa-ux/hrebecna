@@ -32,6 +32,7 @@ body {
     padding: 70px 0px 0px 0px;
 }
 
+
 body > header {
     position: fixed;
     top: 0;
@@ -63,7 +64,7 @@ article h1 {
     font-size: 2.3em;
     font-weight: bold;
     text-transform: uppercase;
-    border-bottom: 4px solid #B22222;
+    border-bottom: 4px solid #cb6d51;
     width: max-content;
 }
 
@@ -110,28 +111,15 @@ article {
     clear: both;
 }
 
-.reference-tlacitko {
-    background: #70b73a;
-    color: white;
-    font-size: 0.9em;
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 12px 25px;
-    border-radius: 25px;
-}
 
 .kontakt-tlacitko{
-    background: #B22222;
+    background: #cb6d51;
     padding: 5px 5px;
     border-radius: 5px;
 }
 
 .kontakt-tlacitko:hover,
 
-.reference-tlacitko:hover {
-    filter: brightness(115%) contrast(85%);
-    border: 0;
-}
 
 .vlevo{
     float: right;
@@ -147,7 +135,31 @@ article {
     font-weight: bold;
 }
 .kontakt {
-   padding-bottom: 30px;
+    padding-bottom: 30px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+
+.kontakt iframe {
+    width: 100%;
+    max-width: 100%;
+    height: 300px;
+    border: 0;
+}
+
+.map-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    /* 16:9 */
+}
+
+.map-wrapper iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
 }
 
 
@@ -237,7 +249,7 @@ nav ul a {
   }
 
 nav ul a:hover, .aktivni a {
-    border-bottom: 2px solid #B22222;
+    border-bottom: 2px solid #cb6d51;
 }
 
 .welcome {
@@ -347,6 +359,10 @@ footer a {
     #logo small {
         display: none;
     }
+    .email-ikona {
+        display: flex;
+        justify-content: center;
+    }
    .welcome {
     height: 300px;             /* Snížení výšky, aby vynikl obsah pod tím */
     background-attachment: scroll; /* Vypnutí fixního pozadí (pro lepší podporu na mobilech) */
@@ -379,7 +395,7 @@ body > header:has(nav.open) {
 }
 
 .lang-switch a.active {
-    border-bottom: 2px solid #B22222;
+    border-bottom: 2px solid #cb6d51;
     font-weight: bold;
 }
 
