@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+:root{
+    --content-padding: 30px
+}
+
+
 @font-face {
     font-family: Poppins;
     src: url(../fonty/Poppins-Regular.ttf);
@@ -23,26 +28,25 @@ body {
     font: 17px "Poppins";
     color: #414042;
     background: #f9f9f9;
-    box-sizing: border-box;
     margin: 0;
     padding: 70px 0px 0px 0px;
-    width: 100%;
 }
 
 body > header {
-    height: 70px;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+
     width: 100%;
     background: #4682B4;
     color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    padding: 0 30px;
-}
 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 15px var(--content-padding)
+}
 
 article h1,
 article h2,
@@ -74,6 +78,7 @@ article header {
 article section p {
     margin-bottom: 1.5em;
     line-height: 1.8em;
+    text-align: justify;
 }
 
 article section a {
@@ -82,7 +87,7 @@ article section a {
 
 article {
     max-width: 960px;
-    padding: 50px 50px 10px 50px;
+    padding: 20px var(--content-padding);
     margin: 0 auto;
 }
 
@@ -117,8 +122,8 @@ article {
 
 .kontakt-tlacitko{
     background: #B22222;
-    padding: 10px 20px;
-    border-radius: 20px;
+    padding: 5px 5px;
+    border-radius: 5px;
 }
 
 .kontakt-tlacitko:hover,
@@ -147,23 +152,17 @@ article {
 
 
 #logo {
-    height: auto;
-    margin: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-size: 40px 40px;
+    max-width: 230px;
     cursor: pointer;
 }
 
-#logo > *{
-    margin: 0 0 0 40px;
-}
-
 #logo h1 {
-    font-weight: normal;
     font-size: 1.7em;
-    line-height: 1.2em;
+    line-height: 1.1em;
+    font-weight: normal;
     color: white;
 }
 
@@ -173,8 +172,11 @@ article {
 }
 
 #logo small {
-    text-transform: uppercase;
     font-size: 0.85em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 #cena_pokoj{
@@ -213,27 +215,25 @@ article {
     text-decoration: none;
 }
 
-
 nav ul {
-    margin: 0;
-    list-style-type: none;
+    list-style: none;
     display: flex;
     align-items: center;
-    height: 100%;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li {
-    padding: 0 25px;
-    margin: 0 5px;
-    font-size: 1em;
-    line-height: 4.3em;
+    margin:0;
+    padding: 0;
 }
 
 nav ul a {
     color: white;
-    padding: 8px 0;
     text-decoration: none;
     text-transform: uppercase;
+    padding: 8px 0;
   }
 
 nav ul a:hover, .aktivni a {
@@ -242,7 +242,7 @@ nav ul a:hover, .aktivni a {
 
 .welcome {
     background-image: url(../img/chalupa_v_zime.JPEG);
-    height: 550px;
+    height: 500px;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -266,37 +266,41 @@ footer a {
 
 #hamburger {
     display: none;
-    align-self: center;
-    width: 30px;
+    width: 26px;
     height: 22px;
-    margin: 0 50px 0 0;
     cursor: pointer;
     position: relative;
 }
-
 #hamburger::before,
 #hamburger::after,
 #hamburger div {
     content: "";
     position: absolute;
-    width: 100%;
-    height: 4px;
-    background: white;
     left: 0;
-    transition: 0.3s;
+    width: 100%;
+    height: 3px;
+    border-radius: 2px;
+    background: white;
+    transition: transform 0.25s ease, opacity 0.2s ease;
+    transform-origin: center;
 }
+#hamburger::before {top: 9px;}
+#hamburger div {top: 9px;}
+#hamburger::after {bottom: 0;}
 
-#hamburger::before {
-    top: 0;
-}
-
-#hamburger div {
+#hamburger.open::before {
     top: 9px;
+    transform: rotate(45deg);
+}
+#hamburger.open::after {
+    bottom: auto;
+    top: 9px;
+    transform: rotate(-45deg);
+}
+#hamburger.open div {
+    opacity: 0;
 }
 
-#hamburger::after {
-    bottom: 0;
-}
 
 @media (max-width: 768px) {
     body {
@@ -306,32 +310,8 @@ footer a {
         flex-direction: row;
         height: auto;
         align-items: flex-start;
-        padding: 20px 15px;
         justify-content: space-between; 
-        padding: 15px;
-    }
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: flex-start;
-    }
-    nav ul li {
-        padding: 5px 10px;
-        margin: 3px 3px;
-        line-height: 1.8em;
-    }
-    article h1 {
-    width: auto;           /* Zrušení max-content, aby se text mohl zalamovat */
-    font-size: 1.6em;      /* Zmenšení písma pro mobilní displeje */
-    word-wrap: break-word; /* Zalomení dlouhých slov */
-    }
-    article {
-        padding: 20px 20px 20px 20px; /* Menší padding na mobilu */
-    }
-    article ul{
-        padding: 0 0 0 30px; /* Menší padding na mobilu */
-    }
-    #hamburger {
-    display: block;
+        padding: 15px var(--content-padding)
     }
     nav {
         width: 100%;
@@ -341,17 +321,34 @@ footer a {
         display: block;
     }
     nav ul {
+        justify-content: flex-start;
         flex-direction: column;
         width: 100%;
     }
     nav ul li {
         width: 100%;
-        text-align: left;
-        padding: 10px 30px
+        padding-left: var(--content-padding);
+        padding-right: var(--content-padding);
+    }
+    article h1 {
+        width: auto;           /* Zrušení max-content, aby se text mohl zalamovat */
+        font-size: 1.6em;      /* Zmenšení písma pro mobilní displeje */
+        word-wrap: break-word; /* Zalomení dlouhých slov */
+    }
+    article {
+        padding: 20px var(--content-padding)
+    }
+    article ul{
+        padding-left: var(--content-padding);
+    }
+    #hamburger {
+    display: block;
+    }
+    #logo small {
+        display: none;
     }
    .welcome {
     height: 300px;             /* Snížení výšky, aby vynikl obsah pod tím */
-    background-image: url(../img/chalupa_v_zime.JPEG);
     background-attachment: scroll; /* Vypnutí fixního pozadí (pro lepší podporu na mobilech) */
     background-position: center center; /* Přesné centrování */
     }
@@ -371,6 +368,8 @@ body > header:has(nav.open) {
 .lang-switch {
     font-size: 0.9em;
     opacity: 0.9;
+    margin-left: auto;
+    white-space: nowrap;
 }
 
 .lang-switch a {
