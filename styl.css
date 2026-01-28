@@ -11,12 +11,12 @@
 
 @font-face {
     font-family: Poppins;
-    src: url(../fonty/Poppins-Regular.ttf);
+    src: url(fonty/Poppins-Regular.ttf);
     font-weight: normal;
 }
 @font-face {
     font-family: Poppins;
-    src: url(../fonty/Poppins-ExtraBold.ttf);
+    src: url(fonty/Poppins-ExtraBold.ttf);
     font-weight: bold;
 }
 
@@ -241,7 +241,7 @@ nav ul a:hover, .aktivni a {
 }
 
 .welcome {
-    background-image: url(../img/chalupa_v_zime.JPEG);
+    background-image: url(img/chalupa_v_zime.JPEG);
     height: 500px;
     background-size: cover;
     background-position: center;
