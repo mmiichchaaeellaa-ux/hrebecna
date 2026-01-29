@@ -118,7 +118,9 @@ article {
     border-radius: 5px;
 }
 
-.kontakt-tlacitko:hover,
+.kontakt-tlacitko:hover {
+    background: #b85c43;
+}
 
 
 .vlevo{
@@ -323,7 +325,8 @@ footer a {
         height: auto;
         align-items: flex-start;
         justify-content: space-between; 
-        padding: 15px var(--content-padding)
+        padding: 15px var(--content-padding);
+        min-height: 60px;
     }
     nav {
         width: 100%;
@@ -354,7 +357,10 @@ footer a {
         padding-left: var(--content-padding);
     }
     #hamburger {
-    display: block;
+        position: absolute;
+        top: 18px;
+        right: 30px;
+        display: block;
     }
     #logo small {
         display: none;
@@ -370,13 +376,11 @@ footer a {
     }
 }
 
-/* Skrytí loga, pokud header obsahuje otevřenou navigaci */
-body > header:has(nav.open) #logo {
+body.menu-open #logo {
     display: none;
 }
 
-/* Zarovnání navigace doprava, pokud je otevřená */
-body > header:has(nav.open) {
+body.menu-open>header {
     justify-content: flex-end;
 }
 
