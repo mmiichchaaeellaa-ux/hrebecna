@@ -149,6 +149,72 @@ article {
     border: 0;
 }
 
+.box{
+    padding: 40px;
+    position: relative;
+    background: rgb(245, 244, 244);
+    text-align: center;
+    width: 100%;
+    border: 0;
+    border-radius: 10px;
+}
+
+.box input[type="text"], .box input[type="email"], textarea{
+    border: 2px solid #4682B4;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    padding: 15px 10px;
+    width: 800px;
+    color: #414042;
+    border-radius: 10px;
+    outline: none;
+    max-width: 100%;
+}
+
+.box input[type="text"]:focus, .box input[type="email"]:focus, textarea:focus {
+    transition: 0.25s;
+    width: 850px;
+    border-color: #cb6d51;
+}
+
+.box input[type="submit"]{
+    background: none;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    border: 2px solid #cb6d51;
+    padding: 14px 40px;
+    width: 500px;
+    outline: none;
+    color: #414042;
+    border-radius: 10px;
+    cursor: pointer;
+    max-width: 100%;
+}
+
+.box input[type="submit"]:hover{
+    background-color: #cb6d51;
+}
+
+/*form-result*/
+.form-result{
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+.success{
+    background-color: rgb(3, 217, 146);
+}
+
+.error{
+    background-color: #c03434;
+    color: #f9f9f9;
+}
+
 .map-wrapper {
     position: relative;
     width: 100%;

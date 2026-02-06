@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styl.css" type="text/css"/>
     <link rel="shortcut icon" href="img/mount.png"/>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
     <title>Kontakt</title>
 </head>
 
@@ -43,24 +45,52 @@
         </header>
 
         <section>
-            <p class="kontakt">Dotaz na ubytování na tel: <b>+420 603 355 325</b>  nebo  e-mail: <strong>u.mustku@seznam.cz</strong> 
+            <p>Dotaz na ubytování na tel: <b>+420 603 355 325</b>  nebo  e-mail: <strong>u.mustku@seznam.cz</strong> 
             </p>
-            
-            <div class="email-ikona">
-                <img src="img/email_color.png" alt="email" class="vlevo"/>
-            </div>
+    
+            <div class="kontakt-layout">
+                <div class="kontakt-horni">
+                
+                    <!-- <div class="kontakt-form">
+                        <h2>Kontaktní formulář</h2>
+                        <form id="contactForm">
+                            <input type="hidden" name="website">
+                            <input type="hidden" name="lang" id="langField" value="cs">
+                        
+                            <input type="text" name="name" placeholder="Jméno" required>
+                            <input type="email" name="email" placeholder="E-mail" required>
+                            <textarea name="message" placeholder="Zpráva" required></textarea> -->
+                        
+                            <!-- reCAPTCHA -->
+                            <!-- <div class="g-recaptcha" data-sitekey="6LcxC1ssAAAAAH2Htf-nMo8Miw0zBtI8mp7nyM11"></div>
+                            
+                            
+                            <div class="gdpr-row">
+                                <label>
+                                    <input type="checkbox" required>
+                                    Souhlasím se zpracováním osobních údajů.
+                                </label>
+                            </div>
+                            
+                            <button type="submit">Odeslat</button>
+                            <div id="formMessage"></div>
+                        </form> 
+                    </div>
+                   
+                    <div class="email-ikona">
+                        <img src="img/email_color.png" alt="email">
+                    </div>
+                </div>
 
-            <p class="centrovany">
-                <h2>Kontaktní formulář</h2>
-                <iframe frameborder="0" scrolling="no" width="500px" height="220px"
-                    src="https://www.itnetwork.cz/api/Service-MailForm/696000b07a81f4.73739277">
-                </iframe>
-            </p>
+                <div class="kontakt-text">
+                    <p>Ať už nás kontaktujete prostřednictvím tohoto formuláře nebo přiložených kontaktů, vždy prosím počkejte na potvrzení rezervace. Děkujeme!</p>
+                </div> 
+            </div> -->
 
-            <div class="mapa">
+            <div class="kontakt-mapa">
                 <h2>Kde nás najdete</h2>
                 <div class="map-wrapper">
-                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2544.2256434849924!2d12.82567947704608!3d50.38099207157903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a0bd7883589cdd%3A0xf9ab11f6e1065f6f!2zQ2hhbHVwYSBVIE3Fr3N0a3UgSMWZZWJlxI1uw6EgMjc!5e0!3m2!1scs!2scz!4v1767903727682!5m2!1scs!2scz" width="960" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">      
+                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2544.2256434849924!2d12.82567947704608!3d50.38099207157903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a0bd7883589cdd%3A0xf9ab11f6e1065f6f!2zQ2hhbHVwYSBVIE3Fr3N0a3UgSMWZZWJlxI1uw6EgMjc!5e0!3m2!1scs!2scz!4v1767903727682!5m2!1scs!2scz" loading="lazy" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">      
                     </iframe>
                 </div>
             </div>
@@ -75,6 +105,16 @@
     <script src="js/domovska-obrazovka.js"></script>
     <script src="js/hamburger.js"></script>
     <script src="js/lang-switch.js"></script>
+    <script src="js/ajax-odesilani.js"></script>
+
+    <script>
+        document.getElementById("lang-cz").addEventListener("click", function () {
+            document.getElementById("langField").value = "cs";
+        });
+        document.getElementById("lang-de").addEventListener("click", function () {
+            document.getElementById("langField").value = "de";
+        });
+    </script>
 </body>
 
 </html>
