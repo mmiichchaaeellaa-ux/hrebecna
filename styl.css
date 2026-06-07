@@ -320,10 +320,10 @@ nav ul a:hover, .aktivni a {
 }
 
 .welcome {
-    background-image: url(img/chalupa_v_zime.JPEG);
+    background-image: url(img/chalupa_v_lete.JPEG);
     height: 500px;
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
     background-attachment: fixed;
   }
 
